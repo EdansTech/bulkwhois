@@ -13,7 +13,6 @@ requestlimitif=requestlimit-1
 domainlist.gsub!(/\r\n?/, "\n")
 domainlist.each_line do |line|
     if "#{line_num}" > "#{requestlimitif}"
-        print "#{line_num}"
         abort("\n Your request limit of #{requestlimit} has been reached")
         exit(0)
     end
